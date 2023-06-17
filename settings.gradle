@@ -1,0 +1,33 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
+rootProject.name = "Hostel_manage"
+include ':app'
+
+/*The code you provided is typically found in the settings.gradle file in an Android Studio project. It configures the dependency resolution management for the project.
+
+The dependencyResolutionManagement block is a feature introduced in Gradle 7. It allows you to configure how Gradle should resolve dependencies for your project.
+
+In this code, repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS) sets the resolution strategy for repositories. RepositoriesMode.FAIL_ON_PROJECT_REPOS means that Gradle will fail the build if it encounters any repositories defined within the project (typically in the build.gradle files of modules) that are not found. It forces the use of repositories defined only in the settings.gradle file.
+
+The repositories block specifies the repositories where Gradle should look for dependencies. In this case, it adds three repositories:
+
+google(): This repository is provided by Google and hosts various libraries and dependencies related to Google services and products. It allows you to include dependencies from the Google ecosystem, such as Firebase or Google Play Services.
+
+mavenCentral(): This repository is the default central repository for Maven artifacts. It contains a wide range of open-source libraries and dependencies that are commonly used in Java and Android development.
+
+maven { url 'https://jitpack.io' }: This adds the JitPack repository, which is a popular repository for building and distributing GitHub projects as Maven artifacts. It allows you to include dependencies from projects hosted on GitHub.
+
+By specifying these repositories, you are telling Gradle where to look for the dependencies required by your Android project.*/
